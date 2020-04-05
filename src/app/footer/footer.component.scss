@@ -1,0 +1,21 @@
+@import '../../styles.scss';
+
+.growww {
+    
+    &__footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: $primaryColor;
+        color: $whiteColor;
+    }
+
+    &__footer p {
+        margin: 0;
+        font-size: $fontSmall;
+        text-align: center;
+    }
+}

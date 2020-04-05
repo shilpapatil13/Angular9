@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.growww {
+
+    &__nordea-grow-text {
+        letter-spacing: 3px;
+        color: $primaryColor;
+        margin-top: $paddingSmall;
+        margin-left: $paddingMedium;
+    }
+
+    &__autocomplete-form {
+        min-width: 150px;
+        width: 100%;
+    }
+
+}

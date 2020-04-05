@@ -1,0 +1,48 @@
+@import '../../styles.scss';
+
+.growww {
+
+    &__home-action {
+        margin-top: 3rem;
+    }
+}
+#banner {
+    background-color:$primaryColor;
+    color: $whiteColor;
+    padding: 8em 0 6em 0;
+    text-align: center;
+  }
+#banner input, #banner select, #banner textarea {
+    color: $whiteColor;
+  }
+  
+  #banner a {
+    color: $primaryColor;
+  }
+  
+  #banner input[type="button"],
+  #banner button,
+  #banner .button {
+    background-color: $whiteColor;
+    color: $primaryColor !important;
+  }
+  
+  #banner h2 {
+    border: 1px solid $whiteColor;
+    font-size: 2.4em;
+    line-height: 1.35em;
+    margin: 0 auto 1em;
+    padding: 1.1em;
+    position: relative;
+    width: 40%;
+    color: $whiteColor;
+  }
+  
+  #banner h2 span {
+    font-size: 1.25rem;
+  }
+  
+  #banner p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }

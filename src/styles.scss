@@ -1,0 +1,67 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Raleway, "Helvetica Neue", sans-serif; }
+
+$fontSmall: 0.8125rem;
+$fontMedium: 1rem;
+$fontLarge: 1.25rem;
+$fontXLarge: 1.5rem;
+$fontJumbo: 5rem;
+
+$paddingSmall: 0.5rem;
+$paddingMedium: 1rem;
+$paddingLarge: 1.25rem;
+$paddingXLarge: 1.5rem;
+$paddingJumbo: 4rem;
+
+$marginSmall: 0.5rem;
+$marginMedium: 1rem;
+$marginLarge: 1.25rem;
+$marginXLarge: 1.5rem;
+$marginJumbo: 4rem;
+
+$primaryColor: darkblue;
+$grayColor: gray;
+$lightGrayColor: #EEEEEE;
+$blackColor: #000;
+$whiteColor: #fff;
+
+.growww {
+
+    &__text-small {
+        font-size: $fontSmall;
+    }
+    
+    &__text-medium {
+        font-size: $fontMedium;
+    }
+    
+    &__text-large {
+        font-size: $fontLarge;
+    }
+    
+    &__text-xlarge {
+        font-size: $fontXLarge;
+    }
+
+    &__align-center {
+        text-align: center !important;
+    }
+
+    &__align-right {
+        text-align: right !important;
+    }
+
+    &__align-left {
+        text-align: left !important;
+    }
+
+    &__nordea-button {
+        background-color: $primaryColor;
+        color: $whiteColor; 
+    }
+
+    &__full-width {
+        width: 100%;
+    }
+    
+}

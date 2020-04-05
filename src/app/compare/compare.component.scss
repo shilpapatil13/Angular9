@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+.growww {
+    &__compare-container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+        box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+        height: 130px;
+        margin-top: 2.5rem;
+    }
+
+    &__box {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        background-color: $whiteColor;
+        text-align: center;
+        border: 1px solid $lightGrayColor;
+        height: 130px;
+        padding: 20px;
+    }
+}
