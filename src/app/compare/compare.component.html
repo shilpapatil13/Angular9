@@ -52,19 +52,19 @@
 <div>{{fundsList}}</div>
 <div>
     <table class="growww__fundDetails">
-        <!-- <tr>
+         <tr>
             <td>
                 Risk
             </td>
-            <td>{{fundData.risk}}</td>
+            <td *ngIf="fundData">{{fundData.risk}}</td>
             <td>-</td>
             <td>-</td>
-        </tr> -->
+        </tr> 
         <tr>
             <td>
                 Min SIP Amount
             </td>
-            <td>{{fundData.minPurchaseAmt}}</td>
+            <td *ngIf="fundData">{{fundData.minPurchaseAmt}}</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -72,7 +72,7 @@
             <td>
                 NAV
             </td>
-            <td>{{fundData.nav}}</td>
+            <td *ngIf="fundData">{{fundData.nav}}</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -80,7 +80,7 @@
             <td>
                 Fund Started
             </td>
-            <td>{{fundData.fundStartDate}}</td>
+            <td *ngIf="fundData">{{fundData.fundStartDate}}</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -88,7 +88,7 @@
             <td>
                 Fund Size
             </td>
-            <td>{{fundData.fundSize}}</td>
+            <td *ngIf="fundData">{{fundData.fundSize}}</td>
             <td>-</td>
             <td>-</td>
         </tr>
