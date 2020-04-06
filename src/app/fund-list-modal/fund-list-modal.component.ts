@@ -49,10 +49,8 @@ export class FundListModalComponent implements OnInit {
   }
 
   onFundSelection(option: any): void {
-    
     option.value['modalBoxId'] = this.modalIndex;
     this.dialogRef.close(option.value);
-    
   }
 
 }

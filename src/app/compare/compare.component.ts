@@ -18,6 +18,9 @@ export class CompareComponent implements OnInit {
   fundName1:any;
   fundName2:any;
   fundName3:any;
+  result1: Fund;
+  result2: Fund;
+  result3: Fund;
 
   
   ngOnInit(): void {
@@ -38,24 +41,31 @@ export class CompareComponent implements OnInit {
     const modalDialog = this.matDialog.open(FundListModalComponent, dialogConfig);
     modalDialog.afterClosed().subscribe(result  => {
       if(result)
+      
         {
 
           if(result.modalBoxId.modalid === 1)
           {
             this.modalBox1 = result.modalBoxId.modalid;
             this.fundName1 = result.name;
+            this.result1 = result;
+            console.log('result 1 -- > ', this.result1);
          
           }
           if(result.modalBoxId.modalid === 2)
           {
             this.modalBox2 = result.modalBoxId.modalid;
             this.fundName2 = result.name;
+            this.result2 = result;
+            console.log('result 2 -- > ', this.result2);
          
           }
           if(result.modalBoxId.modalid === 3)
           {
             this.modalBox3 = result.modalBoxId.modalid;
             this.fundName3 = result.name;
+            this.result3 = result;
+            console.log('result 3 -- > ', this.result3);
           }
           
           if(!this.fundsList)

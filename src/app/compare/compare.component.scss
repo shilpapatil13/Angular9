@@ -20,5 +20,34 @@
         border: 1px solid $lightGrayColor;
         height: 130px;
         padding: 20px;
+        position: relative;
+    }
+
+    &__add-icon {
+        font-size: 2rem;
+        color: $primaryColor;
+    }
+
+    &__cancel-icon {
+        position: absolute;
+        text-align: right;
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+        color: $primaryColor;
+        cursor: pointer;
+    }
+
+    &__fund-name {
+        font-size: $fontMedium;
+        padding: 0 5px;
+    }
+
+    &__add-a-fund {
+        font-size: $fontLarge;
+    }
+
+    &__fund-add-center {
+        padding: 0.9rem;
     }
 }
