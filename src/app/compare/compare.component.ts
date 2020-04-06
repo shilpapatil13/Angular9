@@ -20,18 +20,22 @@ export class CompareComponent implements OnInit {
   fundName1:any;
   fundName2:any;
   fundName3:any;
+  fundData;
 
   
   ngOnInit(): void {
+    
     const fundId = this.route.snapshot.params['id'];
     if(fundId !=='') {
     this.fundService.getFundsById(fundId).subscribe((data) => {
       this.modalBox1 = 1;
+      this.fundData = data[0];
       this.fundName1 = data[0].name;
-      const result = {name:this.fundName1};
+      const result = {name:this.fundName1,modalBoxId: {modalid:this.modalBox1}};
        this.addAndGetFundsList(result);
     });
   }
+
   }
 
   openModal(i) {

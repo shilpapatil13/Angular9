@@ -21,4 +21,12 @@
         height: 130px;
         padding: 20px;
     }
+    &__fundDetails {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    &__fundDetails td{
+        border:0px solid;
+        padding: 7px;
+    }
 }
