@@ -1,0 +1,26 @@
+<div style="text-align: right;">
+    <i class="material-icons" mat-dialog-close>close</i> 
+  </div>
+  <div>
+      <h1 style="text-align: center;">Search for funds here</h1>
+      
+  </div>
+  <br />
+  
+  <form class="growww__autocomplete-form">
+    <mat-form-field class="growww__full-width">
+        <input type="text"
+               placeholder="Search Mutual funds"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onFundSelection($event.option)" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+  </form>
+
+  

@@ -14,7 +14,7 @@ export class FundService {
   constructor(private http: HttpClient) { }
 
   getFunds(): Observable<Fund[]> {
-    return this.http.get<Fund[]>(fundUrl);
+    return this.http.get<Fund[]>(fundUrl)
   }
 
   getFundsById(id): Observable<Fund[]> { // Needs Change

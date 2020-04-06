@@ -12,6 +12,7 @@ import { CompareComponent } from './compare/compare.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FundListModalComponent } from './fund-list-modal/fund-list-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     DetailsComponent,
-    CompareComponent
+    CompareComponent,
+    FundListModalComponent
   ],
   imports: [
     BrowserModule,

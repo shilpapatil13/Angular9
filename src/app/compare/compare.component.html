@@ -4,16 +4,47 @@
         <br />
         <div style="text-align: left;">Detailed comparison on parameters like NAV | Returns | Risk | Rating | Analysis</div>
     </div>
-    <div class="growww__box" style="padding-top: 35px;">
-        <i (click)="openModal()" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
-        <h3 class="fs012AddHeading">Add a fund</h3>
+    <div  class="growww__box" style="padding-top: 35px;">
+        <div *ngIf="(modalBox1 != 1)">
+            <i (click)="openModal(1)" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
+            <h3 class="fs012AddHeading">Add a fund1</h3>
+        </div>
+        <div  *ngIf="(modalBox1 === 1)">
+            <span class="material-icons" (click) ="toggleFunds(modalBox1)">
+                clear
+                </span>
+            <div>Name : {{fundName1}}</div>
+        </div> 
     </div>
-    <div class="growww__box" style="padding-top: 35px;">
-        <i (click)="openModal()" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
-        <h3 class="fs012AddHeading">Add a fund</h3>
+    <div  class="growww__box" style="padding-top: 35px;">
+        <div *ngIf="(modalBox2 !=2)">
+            <i (click)="openModal(2)" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
+            <h3 class="fs012AddHeading">Add a fund2</h3>
+        </div>
+        <div  *ngIf="(modalBox2 === 2)">
+            <span class="material-icons" (click) ="toggleFunds(modalBox2)">
+                clear
+                </span>
+            <div>Name : {{fundName2}}</div>
+        </div> 
     </div>
-    <div class="growww__box" style="padding-top: 35px;">
-        <i (click)="openModal()" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
-        <h3 class="fs012AddHeading">Add a fund</h3>
-    </div> 
+    <div  class="growww__box" style="padding-top: 35px;">
+        <div *ngIf="(modalBox3 !=3)">
+            <i (click)="openModal(3)" class="material-icons" style="color: darkblue;">add_circle_outline</i> 
+            <h3 class="fs012AddHeading">Add a fund3</h3>
+        </div>
+    
+        <div  *ngIf="(modalBox3 === 3)">
+            <span class="material-icons" (click) ="toggleFunds(modalBox3)">
+                clear
+                </span>
+            <div>Name : {{fundName3}}</div>
+        </div> 
+    </div>
+
+    <div *ngFor="let item of fundsList">
+        <div>asdada{{item.id}}</div>
+        <div>dddd{{item.name}}</div>
+    </div>
 </div>
+
