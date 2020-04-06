@@ -1,6 +1,6 @@
 [
     {
-       "id":1,
+       "id":"1",
        "name":"Axis Midcap Direct Plan Growth",
        "fundType":"Equity",
        "morningStar":5,
@@ -35,7 +35,7 @@
        ]
     },
     {
-       "id":2,
+       "id":"2",
        "name":"L&T Midcap Fund Direct Growth",
        "fundType":"Equity",
        "morningStar":4,
@@ -70,7 +70,7 @@
        ]
     },
     {
-       "id":3,
+       "id":"3",
        "name":"HDFC Mid Cap Opportunities Direct Plan Growth",
        "fundType":"Equity",
        "morningStar":3,
@@ -105,7 +105,7 @@
        ]
     },
     {
-       "id":4,
+       "id":"4",
        "name":"DSP Midcap Direct Plan Growth",
        "fundType":"Equity",
        "morningStar":4,

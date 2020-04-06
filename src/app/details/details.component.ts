@@ -8,12 +8,18 @@ import { FundService } from '../services/fund.service';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-
+  fundId;
+  fundname;
   constructor(private route: ActivatedRoute, private fundService: FundService, private router: Router) { }
 
   ngOnInit(): void {
-    const fundId = this.route.snapshot.params['id'];
-    console.log('fund ID is -- > ', fundId);
+    this.fundId = this.route.snapshot.params['id'];
+    this.fundService.getFundsById(this.fundId).subscribe((data) => {
+      this.fundname = data[0].name;
+    });
   }
-
+  navigateCompare()
+  {
+    this.router.navigate(['/compare', this.fundId]);
+  }
 }

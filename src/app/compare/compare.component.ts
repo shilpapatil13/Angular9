@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FundListModalComponent } from '../fund-list-modal/fund-list-modal.component';
 import { Fund } from '../models/fund';
+import { FundService } from '../services/fund.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-compare',
@@ -10,7 +12,7 @@ import { Fund } from '../models/fund';
 })
 export class CompareComponent implements OnInit {
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog, private fundService: FundService, private route: ActivatedRoute) { }
   fundsList: any = [];
   modalBox1:number;
   modalBox2:number;
@@ -18,12 +20,22 @@ export class CompareComponent implements OnInit {
   fundName1:any;
   fundName2:any;
   fundName3:any;
-  result1: Fund;
-  result2: Fund;
-  result3: Fund;
+  fundData;
 
   
   ngOnInit(): void {
+    
+    const fundId = this.route.snapshot.params['id'];
+    if(fundId !=='') {
+    this.fundService.getFundsById(fundId).subscribe((data) => {
+      this.modalBox1 = 1;
+      this.fundData = data[0];
+      this.fundName1 = data[0].name;
+      const result = {name:this.fundName1,modalBoxId: {modalid:this.modalBox1}};
+       this.addAndGetFundsList(result);
+    });
+  }
+
   }
 
   openModal(i) {
@@ -48,36 +60,21 @@ export class CompareComponent implements OnInit {
           {
             this.modalBox1 = result.modalBoxId.modalid;
             this.fundName1 = result.name;
-            this.result1 = result;
-            console.log('result 1 -- > ', this.result1);
          
           }
           if(result.modalBoxId.modalid === 2)
           {
             this.modalBox2 = result.modalBoxId.modalid;
             this.fundName2 = result.name;
-            this.result2 = result;
-            console.log('result 2 -- > ', this.result2);
          
           }
           if(result.modalBoxId.modalid === 3)
           {
             this.modalBox3 = result.modalBoxId.modalid;
             this.fundName3 = result.name;
-            this.result3 = result;
-            console.log('result 3 -- > ', this.result3);
           }
           
-          if(!this.fundsList)
-          {
-            let data = new Array();
-            data.push(result);
-            this.fundsList = data;
-          }
-          else
-          {
-            this.fundsList.push(result);
-          } 
+          this.addAndGetFundsList(result);
 
           this.fundsList = this.fundsList;
           console.log(this.fundsList);
@@ -86,7 +83,19 @@ export class CompareComponent implements OnInit {
       });
   }
 
-
+private addAndGetFundsList(result: any):any[] {
+  if(!this.fundsList)
+  {
+    let data = new Array();
+    data.push(result);
+    this.fundsList = data;
+  }
+  else
+  {
+    this.fundsList.push(result);
+  } 
+  return this.fundsList;
+}
 
   toggleFunds(modalId){
    

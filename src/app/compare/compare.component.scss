@@ -50,4 +50,12 @@
     &__fund-add-center {
         padding: 0.9rem;
     }
+    &__fundDetails {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    &__fundDetails td{
+        border:0px solid;
+        padding: 7px;
+    }
 }
