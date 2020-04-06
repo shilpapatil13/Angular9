@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FundListModalComponent } from '../fund-list-modal/fund-list-modal.component';
 import { Fund } from '../models/fund';
+import { FundService } from '../services/fund.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-compare',
@@ -10,7 +12,7 @@ import { Fund } from '../models/fund';
 })
 export class CompareComponent implements OnInit {
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog, private fundService: FundService, private route: ActivatedRoute) { }
   fundsList: any = [];
   modalBox1:number;
   modalBox2:number;
@@ -21,6 +23,15 @@ export class CompareComponent implements OnInit {
 
   
   ngOnInit(): void {
+    const fundId = this.route.snapshot.params['id'];
+    if(fundId !=='') {
+    this.fundService.getFundsById(fundId).subscribe((data) => {
+      this.modalBox1 = 1;
+      this.fundName1 = data[0].name;
+      const result = {name:this.fundName1};
+       this.addAndGetFundsList(result);
+    });
+  }
   }
 
   openModal(i) {
@@ -58,16 +69,7 @@ export class CompareComponent implements OnInit {
             this.fundName3 = result.name;
           }
           
-          if(!this.fundsList)
-          {
-            let data = new Array();
-            data.push(result);
-            this.fundsList = data;
-          }
-          else
-          {
-            this.fundsList.push(result);
-          } 
+          this.addAndGetFundsList(result);
 
           this.fundsList = this.fundsList;
           console.log(this.fundsList);
@@ -76,7 +78,19 @@ export class CompareComponent implements OnInit {
       });
   }
 
-
+private addAndGetFundsList(result: any):any[] {
+  if(!this.fundsList)
+  {
+    let data = new Array();
+    data.push(result);
+    this.fundsList = data;
+  }
+  else
+  {
+    this.fundsList.push(result);
+  } 
+  return this.fundsList;
+}
 
   toggleFunds(modalId){
    
