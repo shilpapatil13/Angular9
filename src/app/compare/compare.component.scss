@@ -9,6 +9,7 @@
         box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
         height: 130px;
         margin-top: 2.5rem;
+        margin-bottom: $marginXLarge;
     }
 
     &__box {
@@ -55,8 +56,51 @@
         border-collapse: collapse;
         table-layout: fixed;
     }
-    &__fundDetails td{
+    /* &__fundDetails td{
         border:0px solid;
         padding: 7px;
+    } */
+
+    &__table-row-even {
+        background-color: $whiteColor;
+    }
+
+    &__table-row-odd {
+        background-color: #f9fafa;
+    }
+
+    &__section-heaing {
+        padding: 15px 30px;
+        border-bottom: 1px solid $lightGrayColor;
+        margin-bottom: 0;
+    }
+
+    &__table-heading {
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        color: #1a1a1a;
+        border: none;
+        font-weight: 500;
+    }
+
+    &__table-content {
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #1a1a1a;
+        border: none;
+        text-align: center;
+        border-right: .5px solid hsla(207,5%,52%,.3);
+        border-left: .5px solid hsla(207,5%,52%,.3);
+    }
+
+    &__no-right-border {
+        border-right: none;
+    }
+
+    &__padding-left-zero {
+        padding-left: 0;
     }
 }

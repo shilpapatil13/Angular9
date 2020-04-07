@@ -3,7 +3,7 @@
 .growww {
     
     &__footer {
-        position: absolute;
+        position: fixed;
         right: 0;
         bottom: 0;
         left: 0;
@@ -11,6 +11,7 @@
         text-align: center;
         background-color: $primaryColor;
         color: $whiteColor;
+        width: 100%;
     }
 
     &__footer p {
