@@ -53,6 +53,7 @@
     &__fundDetails {
         width: 100%;
         border-collapse: collapse;
+        table-layout: fixed;
     }
     &__fundDetails td{
         border:0px solid;

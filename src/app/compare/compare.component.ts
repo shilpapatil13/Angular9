@@ -20,7 +20,9 @@ export class CompareComponent implements OnInit {
   fundName1:any;
   fundName2:any;
   fundName3:any;
-  fundData;
+  fundData1;
+  fundData2;
+  fundData3;
 
   
   ngOnInit(): void {
@@ -29,7 +31,7 @@ export class CompareComponent implements OnInit {
     if(fundId !=='') {
     this.fundService.getFundsById(fundId).subscribe((data) => {
       this.modalBox1 = 1;
-      this.fundData = data[0];
+      this.fundData1 = data[0];
       this.fundName1 = data[0].name;
       const result = {name:this.fundName1,modalBoxId: {modalid:this.modalBox1}};
        this.addAndGetFundsList(result);
@@ -60,23 +62,25 @@ export class CompareComponent implements OnInit {
           {
             this.modalBox1 = result.modalBoxId.modalid;
             this.fundName1 = result.name;
+            this.fundData1 = result;
          
           }
           if(result.modalBoxId.modalid === 2)
           {
             this.modalBox2 = result.modalBoxId.modalid;
             this.fundName2 = result.name;
-         
+            this.fundData2 = result;
           }
           if(result.modalBoxId.modalid === 3)
           {
             this.modalBox3 = result.modalBoxId.modalid;
             this.fundName3 = result.name;
+            this.fundData3 = result;
           }
           
           this.addAndGetFundsList(result);
 
-          this.fundsList = this.fundsList;
+          //this.fundsList = this.fundsList;
           console.log(this.fundsList);
          
         }
@@ -104,12 +108,18 @@ private addAndGetFundsList(result: any):any[] {
     
   console.log(this.fundsList);
   
-  if(modalId === 1)
+  if(modalId === 1) {
     this.modalBox1 = 0;  
-  else if(modalId === 2)
+    this.fundData1 = '';
+  }
+  else if(modalId === 2) {
     this.modalBox2 = 0;
-  else if(modalId === 3)
+    this.fundData2 = '';
+  }
+  else if(modalId === 3) {
     this.modalBox3 = 0;
+    this.fundData3 = '';
+  }
   else
     return 0;
     

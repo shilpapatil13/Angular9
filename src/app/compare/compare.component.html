@@ -2,42 +2,43 @@
     <div class="growww__box">
         <div style="text-align: left; font-size: 1.25rem;">Compare Funds</div>
         <br />
-        <div style="text-align: left;">Detailed comparison on parameters like NAV | Returns | Risk | Rating | Analysis</div>
+        <div style="text-align: left;">Detailed comparison on parameters like NAV | Returns | Risk | Rating | Analysis
+        </div>
     </div>
-    <div  class="growww__box" >
+    <div class="growww__box">
         <div *ngIf="(modalBox1 != 1)" class="growww__fund-add-center">
-            <i (click)="openModal(1)" class="material-icons growww__add-icon">add_circle_outline</i> 
+            <i (click)="openModal(1)" class="material-icons growww__add-icon">add_circle_outline</i>
             <h3 class="growww__add-a-fund">Add a fund</h3>
         </div>
-        <div  *ngIf="(modalBox1 === 1)">
-            <span class="material-icons growww__cancel-icon" (click) ="toggleFunds(modalBox1)">clear</span>
+        <div *ngIf="(modalBox1 === 1)">
+            <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox1)">clear</span>
             <div class="growww__fund-name">{{fundName1}}</div>
 
             <div>
 
             </div>
-        </div> 
+        </div>
     </div>
-    <div  class="growww__box" >
-        <div *ngIf="(modalBox2 !=2)"  class="growww__fund-add-center">
-            <i (click)="openModal(2)" class="material-icons growww__add-icon">add_circle_outline</i> 
+    <div class="growww__box">
+        <div *ngIf="(modalBox2 !=2)" class="growww__fund-add-center">
+            <i (click)="openModal(2)" class="material-icons growww__add-icon">add_circle_outline</i>
             <h3 class="growww__add-a-fund">Add a fund</h3>
         </div>
-        <div  *ngIf="(modalBox2 === 2)">
-            <span class="material-icons growww__cancel-icon" (click) ="toggleFunds(modalBox2)">clear</span>
+        <div *ngIf="(modalBox2 === 2)">
+            <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox2)">clear</span>
             <div class="growww__fund-name">{{fundName2}}</div>
-        </div> 
+        </div>
     </div>
-    <div  class="growww__box" >
-        <div *ngIf="(modalBox3 !=3)"  class="growww__fund-add-center">
-            <i (click)="openModal(3)" class="material-icons growww__add-icon">add_circle_outline</i> 
+    <div class="growww__box">
+        <div *ngIf="(modalBox3 !=3)" class="growww__fund-add-center">
+            <i (click)="openModal(3)" class="material-icons growww__add-icon">add_circle_outline</i>
             <h3 class="growww__add-a-fund">Add a fund</h3>
         </div>
-    
-        <div  *ngIf="(modalBox3 === 3)">
-            <span class="material-icons growww__cancel-icon" (click) ="toggleFunds(modalBox3)">clear</span>
+
+        <div *ngIf="(modalBox3 === 3)">
+            <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox3)">clear</span>
             <div class="growww__fund-name">{{fundName3}}</div>
-        </div> 
+        </div>
     </div>
     {{fundsList}}
     <div *ngFor="let item of fundsList">
@@ -45,53 +46,137 @@
         <div>dddd{{item.name}}</div>
     </div>
 </div>
-<br/>
-<br/>
-<h2>Fund Details</h2>
-<br/>
-<div>{{fundsList}}</div>
-<div>
-    <table class="growww__fundDetails">
-         <tr>
-            <td>
-                Risk
-            </td>
-            <td *ngIf="fundData">{{fundData.risk}}</td>
-            <td>-</td>
-            <td>-</td>
-        </tr> 
-        <tr>
-            <td>
-                Min SIP Amount
-            </td>
-            <td *ngIf="fundData">{{fundData.minPurchaseAmt}}</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>
-                NAV
-            </td>
-            <td *ngIf="fundData">{{fundData.nav}}</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>
-                Fund Started
-            </td>
-            <td *ngIf="fundData">{{fundData.fundStartDate}}</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>
-                Fund Size
-            </td>
-            <td *ngIf="fundData">{{fundData.fundSize}}</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-    </table>
-  </div>
+<br />
+<br />
+<!--May be we can move to new component-->
+<div class="growww__compare-container">
+    <h2>Fund Details</h2>
+    <br />
 
+    <div>
+        <table class="growww__fundDetails">
+            <tr>
+                <td>
+                    Risk
+                </td>
+                <td>{{fundData1 ? fundData1.risk:'-'}}</td>
+                <td>{{fundData2 ? fundData2.risk:'-'}}</td>
+                <td>{{fundData3 ? fundData3.risk:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Min SIP Amount
+                </td>
+                <td>{{fundData1 ? fundData1.minPurchaseAmt : '-'}}</td>
+                <td>{{fundData2 ? fundData2.minPurchaseAmt:'-'}}</td>
+                <td>{{fundData3 ? fundData3.minPurchaseAmt:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    NAV
+                </td>
+                <td>{{fundData1 ? fundData1.nav : '-'}}</td>
+                <td>{{fundData2 ? fundData2.nav:'-'}}</td>
+                <td>{{fundData3 ? fundData3.nav:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Fund Started
+                </td>
+                <td>{{fundData1 ? fundData1.fundStartDate : '-'}}</td>
+                <td>{{fundData2 ? fundData2.fundStartDate:'-'}}</td>
+                <td>{{fundData3 ? fundData3.fundStartDate:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Fund Size
+                </td>
+                <td>{{fundData1 ? fundData1.fundSize : '-'}}</td>
+                <td>{{fundData2 ? fundData2.fundSize:'-'}}</td>
+                <td>{{fundData3 ? fundData3.fundSize:'-'}}</td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <h2>Returns</h2>
+    <br />
+    <div>
+        <table class="growww__fundDetails">
+            <tr>
+                <td>
+                    1Y
+                </td>
+                <td>{{fundData1 ? fundData1.oneYear : '-'}}</td>
+                <td>{{fundData2 ? fundData2.oneYear:'-'}}</td>
+                <td>{{fundData3 ? fundData3.oneYear:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    3Y
+                </td>
+                <td>{{fundData1 ? fundData1.threeYears : '-'}}</td>
+                <td>{{fundData2 ? fundData2.threeYears:'-'}}</td>
+                <td>{{fundData3 ? fundData3.threeYears:'-'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    5Y
+                </td>
+                <td>{{fundData1 ? fundData1.fiveYears : '-'}}</td>
+                <td>{{fundData2 ? fundData2.fiveYears:'-'}}</td>
+                <td>{{fundData3 ? fundData3.fiveYears:'-'}}</td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+    
+    <div>
+        <h2>Pros & Cons</h2>
+        <table class="growww__fundDetails">
+            <tr>
+                <td>
+                    Pros
+                </td>
+               
+                <td *ngIf="fundData1">
+                    <ul *ngFor="let fund of fundData1.pros">
+                    {{fund}}</ul>
+                </td>
+                <td *ngIf="!fundData1">-</td>
+                <td *ngIf="fundData2">
+                    <ul *ngFor="let fund of fundData2.pros">
+                    {{fund}}</ul>
+                </td>
+                <td *ngIf="!fundData2">-</td>
+                <td *ngIf="fundData3">
+                    <ul *ngFor="let fund of fundData3.pros">
+                    {{fund}}</ul>
+                </td>
+                <td *ngIf="!fundData3">-</td>
+            </tr>
+            <tr>
+                <td>
+                    Cons
+                
+                    <td *ngIf="fundData1">
+                        <ul *ngFor="let fund of fundData1.cons">
+                        {{fund}}</ul>
+                    </td>
+                    <td *ngIf="!fundData1">-</td>
+                    <td *ngIf="fundData2">
+                        <ul *ngFor="let fund of fundData2.cons">
+                        {{fund}}</ul>
+                    </td>
+                    <td *ngIf="!fundData2">-</td>
+                    <td *ngIf="fundData3">
+                        <ul *ngFor="let fund of fundData3.cons">
+                        {{fund}}</ul>
+                    </td>
+                    <td *ngIf="!fundData3">-</td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
