@@ -39,6 +39,14 @@
         cursor: pointer;
     }
 
+    &__morning-star {
+        color: #ffba1b;
+        font-size: 13px!important;
+        position: relative;
+        top: 2px;
+        left: 1px;
+    }
+
     &__fund-name {
         font-size: $fontMedium;
         padding: 0 5px;
@@ -51,10 +59,24 @@
     &__fund-add-center {
         padding: 0.9rem;
     }
+
     &__fundDetails {
         width: 100%;
         border-collapse: collapse;
         table-layout: fixed;
+    }
+
+    &__fund-details {
+        margin-top: 1rem;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__fund-details-items {
+        padding: 0.5rem;
+        border-radius: 15px;
+        border: 2px solid $lightGrayColor;
     }
     /* &__fundDetails td{
         border:0px solid;

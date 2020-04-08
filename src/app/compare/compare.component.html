@@ -12,7 +12,12 @@
         </div>
         <div *ngIf="(modalBox1 === 1)">
             <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox1)">clear</span>
-            <div class="growww__fund-name">{{fundName1}}</div>
+            <div class="growww__fund-name">{{fundData1.name}}</div>
+            <div class="growww__fund-details">
+                <div class="growww__fund-details-items">{{fundData1.fundType}}</div>
+                <div class="growww__fund-details-items">{{fundData1.cap}}</div>
+                <div class="growww__fund-details-items">{{fundData1.morningStar}}<i class="material-icons growww__morning-star">star</i></div>
+            </div>
         </div>
     </div>
     <div class="growww__box">
@@ -23,6 +28,11 @@
         <div *ngIf="(modalBox2 === 2)">
             <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox2)">clear</span>
             <div class="growww__fund-name">{{fundName2}}</div>
+            <div class="growww__fund-details">
+                <div class="growww__fund-details-items">{{fundData2.fundType}}</div>
+                <div class="growww__fund-details-items">{{fundData2.cap}}</div>
+                <div class="growww__fund-details-items">{{fundData2.morningStar}}<i class="material-icons growww__morning-star">star</i></div>
+            </div>
         </div>
     </div>
     <div class="growww__box">
@@ -34,11 +44,17 @@
         <div *ngIf="(modalBox3 === 3)">
             <span class="material-icons growww__cancel-icon" (click)="toggleFunds(modalBox3)">clear</span>
             <div class="growww__fund-name">{{fundName3}}</div>
+            <div class="growww__fund-details">
+                <div class="growww__fund-details-items">{{fundData3.fundType}}</div>
+                <div class="growww__fund-details-items">{{fundData3.cap}}</div>
+                <div class="growww__fund-details-items">{{fundData3.morningStar}}<i class="material-icons growww__morning-star">star</i></div>
+            </div>
+
         </div>
     </div>
 </div>
 <!--May be we can move to new component-->
-<div class="growww__compare-container" style="height: 360px;">
+<div class="growww__compare-container" style="height: auto;">
     <h2 class="growww__section-heaing">Fund Details</h2>
     <div>
         <table class="growww__fundDetails">
@@ -85,7 +101,7 @@
         </table>
     </div>
 </div>
-<div class="growww__compare-container" style="height: 240px;">
+<div class="growww__compare-container" style="height: auto;">
     <h2 class="growww__section-heaing">Returns</h2>
     <div>
         <table class="growww__fundDetails">
@@ -116,12 +132,13 @@
         </table>
     </div>
 </div>
-<div class="growww__compare-container" style="height: 315px;">
+<div class="growww__compare-container" style="height: auto;">
     <h2 class="growww__section-heaing">Top 5 Holdings</h2>
     <div>
         <table class="growww__fundDetails">
             <tr class="growww__table-row-even">
                 <td class="growww__table-heading">
+                    Top 5 Holdings
                 </td>
                 <td class="growww__table-content" *ngIf="fundData1">
                     <ul class="growww__padding-left-text" *ngFor="let fund of fundData1.topFiveHoldings">
@@ -143,7 +160,7 @@
     </div>
 </div>
 
-<div class="growww__compare-container" style="height: 630px;">
+<div class="growww__compare-container" style="height: auto;">
     <h2 class="growww__section-heaing">Pros & Cons</h2>
     <div>
         <table class="growww__fundDetails">
@@ -191,7 +208,7 @@
     </div>
 </div>
 
-<div class="growww__compare-container" style="height: 463px;">
+<div class="growww__compare-container" style="height: auto;">
     <h2 class="growww__section-heaing">Fund Manager</h2>
     <div>
         <table class="growww__fundDetails">
@@ -223,7 +240,7 @@
     </div>
 </div>
 
-<div class="growww__compare-container" style="height: 380px;  margin-bottom: 20rem;">
+<div class="growww__compare-container" style="height: auto;  margin-bottom: 20rem;">
     <h2 class="growww__section-heaing">About Fund</h2>
     <div>
         <table class="growww__fundDetails">
