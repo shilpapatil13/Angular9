@@ -20,11 +20,11 @@
       "fiveYears":"6.60%",
       "topFive":"21.00%",
       "topFiveHoldings":[
-         "Avenue Supermarts Ltd. - 5.5%",
-         "City Union Bank Ltd. - 3.9%",
-         "Bata India Ltd. - 3.9%",
-         "Voltas Ltd. - 3.8%",
-         "Astral Poly Technik Ltd. - 3.5%"
+         { "name": "Avenue Supermarts Ltd.", "percent": "5.5%"},
+         { "name": "City Union Bank Ltd.", "percent": "3.9%"},
+         { "name": "Bata India Ltd.", "percent": "3.9%"},
+         { "name": "Voltas Ltd.", "percent": "3.8%"},
+         { "name": "Astral Poly Technik Ltd.", "percent": "3.5%"}
       ],
       "pros":[
          "1. Risk is lower compared to the benchmark",
@@ -65,11 +65,11 @@
       "fiveYears":"3.70%",
       "topFive":"13.00%",
       "topFiveHoldings":[
-         "City Union Bank Ltd. - 2.7%",
-         "Cholamandalam Investment & Finance Co. Ltd. - 2.6%",
-         "Ipca Laboratories Ltd. - 2.5%",
-         "Bayer CropScience Ltd. - 2.5%",
-         "Shree Cement Ltd. - 2.5%"
+         { "name": "City Union Bank Ltd.", "percent": "2.7%"},
+         { "name": "Cholamandalam Investment", "percent": "2.6%"},
+         { "name": "Ipca Laboratories Ltd.", "percent": "2.5%"},
+         { "name": "Bayer CropScience Ltd.", "percent": "2.5%"},
+         { "name": "Shree Cement Ltd", "percent": "2.5%"}
       ],
       "pros":[
          "1. Risk is lower compared to the benchmark",
@@ -110,11 +110,11 @@
       "fiveYears":"2.10%",
       "topFive":"19.00%",
       "topFiveHoldings":[
-         "Cholamandalam Investment & Finance Co. Ltd. - 4.5%",
-         "Aarti Industries Ltd. - 3.9%",
-         "Balkrishna Industries Ltd. - 3.8%",
-         "City Union Bank Ltd. - 3.2%",
-         "Sundram Fasteners Ltd. - 3.2%"
+         { "name": "Cholamandalam Investment", "percent": "4.5%"},
+         { "name": "Aarti Industries Ltd.", "percent": "3.9%"},
+         { "name": "Balkrishna Industries Ltd.", "percent": "3.8%"},
+         { "name": "City Union Bank Ltd.", "percent": "3.2%"},
+         { "name": "Sundram Fasteners Ltd.", "percent": "3.2%"}
       ],
       "pros":[
          "1. Risk is lower compared to the benchmark",
@@ -155,11 +155,11 @@
       "fiveYears":"5.20%",
       "topFive":"21.00%",
       "topFiveHoldings":[
-         "Avenue Supermarts Ltd. - 5.5",
-         "City Union Bank Ltd. - 3.9%",
-         "Bata India Ltd. - 3.9%",
-         "Voltas Ltd. - 3.8%",
-         "Astral Poly Technik Ltd. - 3.5%"
+         { "name": "Avenue Supermarts Ltd.", "percent": "5.5%"},
+         { "name": "City Union Bank Ltd.", "percent": "3.9%"},
+         { "name": "Bata India Ltd.", "percent": "3.9%"},
+         { "name": "Voltas Ltd.", "percent": "3.8%"},
+         { "name": "Astral Poly Technik Ltd.", "percent": "3.5%"}
       ],
       "pros":[
          "1. Risk is lower compared to the benchmark",

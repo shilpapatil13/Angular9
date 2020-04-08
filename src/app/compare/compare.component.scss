@@ -59,7 +59,7 @@
     }
 
     &__fund-add-center {
-        padding: 0.9rem;
+        padding: 1.9rem;
     }
 
     &__fundDetails {
@@ -147,4 +147,23 @@
     &__padding-left-zero {
         padding-left: 0;
     }
+
+    &__unique-ul {
+        height: 50px;
+        margin: 0;
+        margin: 0;
+        height: 50px;
+        margin: 0;
+        line-height: 50px;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+}
+
+.even {
+    background-color: #f9fafa;
+}
+
+.odd {
+    background-color: $whiteColor;
 }

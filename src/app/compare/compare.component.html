@@ -148,19 +148,37 @@
                 <td class="growww__table-heading">
                     Top 5 Holdings
                 </td>
-                <td class="growww__table-content" *ngIf="fundData1">
-                    <ul class="growww__padding-left-text" *ngFor="let fund of fundData1.topFiveHoldings">
-                    {{fund}}</ul>
+                <td class="growww__table-content" *ngIf="fundData1" style="padding: 0 !important;">
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul">
+                        <span style="float: left; font-weight: 500;">Name</span>
+                        <span style="float: right; font-weight: 500;">Assets</span>
+                    </ul>
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul" *ngFor="let fund of fundData1.topFiveHoldings; let odd=odd; let even=even; let index = index" [ngClass]="{ odd: odd, even:even}">
+                        <span style="float: left;">{{fund.name}}</span>
+                        <span style="float: right;">{{fund.percent}}</span>
+                    </ul>
                 </td>
                 <td class="growww__table-content" *ngIf="!fundData1">-</td>
-                <td class="growww__table-content" *ngIf="fundData2">
-                    <ul class="growww__padding-left-text" *ngFor="let fund of fundData2.topFiveHoldings">
-                    {{fund}}</ul>
+                <td class="growww__table-content" *ngIf="fundData2" style="padding: 0 !important;">
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul">
+                        <span style="float: left; font-weight: 500;">Name</span>
+                        <span style="float: right; font-weight: 500;">Assets</span>
+                    </ul>
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul" *ngFor="let fund of fundData2.topFiveHoldings; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even:even}">
+                        <span style="float: left;">{{fund.name}}</span>
+                        <span style="float: right;">{{fund.percent}}</span>
+                    </ul>
                 </td>
                 <td class="growww__table-content" *ngIf="!fundData2">-</td>
-                <td class="growww__table-content growww__no-right-border" *ngIf="fundData3">
-                    <ul class="growww__padding-left-text" *ngFor="let fund of fundData3.topFiveHoldings">
-                    {{fund}}</ul>
+                <td class="growww__table-content growww__no-right-border" *ngIf="fundData3" style="padding: 0 !important;">
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul">
+                        <span style="float: left; font-weight: 500;">Name</span>
+                        <span style="float: right; font-weight: 500;">Assets</span>
+                    </ul>
+                    <ul class="growww__padding-left-text growww__padding-left-zero growww__unique-ul" *ngFor="let fund of fundData3.topFiveHoldings; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even:even}">
+                        <span style="float: left;">{{fund.name}}</span>
+                        <span style="float: right;">{{fund.percent}}</span>
+                    </ul>
                 </td>
                 <td class="growww__table-content growww__no-right-border" *ngIf="!fundData3">-</td>
             </tr>
