@@ -1,142 +1,178 @@
 [
-    {
-       "id":"1",
-       "name":"Axis Midcap Direct Plan Growth",
-       "fundType":"Equity",
-       "morningStar":5,
-       "risk":"Moderately High",
-       "nav":"Rs.35.5 (31-Mar-2020)",
-       "isin":"IN10005003",
-       "fundStartDate":"01-Jan-13",
-       "fundSize":"Rs.5,193Cr",
-       "fundManager":"Shreyash Devalkar",
-       "minPurchaseAmt":"Rs.1000",
-       "oneYear":"-9.40%",
-       "threeYears":"6.70%",
-       "fiveYears":"6.60%",
-       "topFive":"21.00%",
-       "topFiveHoldings":[
-          "Avenue Supermarts Ltd. - 5.5%",
-          "City Union Bank Ltd. - 3.9%",
-          "Bata India Ltd. - 3.9%",
-          "Voltas Ltd. - 3.8%",
-          "Astral Poly Technik Ltd. - 3.5%"
-       ],
-       "pros":[
-          "1. Risk is lower compared to the benchmark",
-          "2. Lower expense ratio",
-          "3. 1Y Returns are higher than the benchmark",
-          "4. 3Y Returns are higher than the benchmark"
-       ],
-       "cons":[
-          "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
-          "2. Risk-adjusted returns are lower compared to the category",
-          "3. 5Y Returns are lower than the benchmark"
-       ]
-    },
-    {
-       "id":"2",
-       "name":"L&T Midcap Fund Direct Growth",
-       "fundType":"Equity",
-       "morningStar":4,
-       "risk":"High",
-       "nav":"Rs.105.0 (31-Mar-2020)",
-       "isin":"IN10005006",
-       "fundStartDate":"01-Jan-2013",
-       "fundSize":"Rs.6,213Cr",
-       "fundManager":"Venugopal Manghat",
-       "minPurchaseAmt":"Rs.500",
-       "oneYear":"-26.4%",
-       "threeYears":"-4.60%",
-       "fiveYears":"3.70%",
-       "topFive":"13.00%",
-       "topFiveHoldings":[
-          "City Union Bank Ltd. - 2.7%",
-          "Cholamandalam Investment & Finance Co. Ltd. - 2.6%",
-          "Ipca Laboratories Ltd. - 2.5%",
-          "Bayer CropScience Ltd. - 2.5%",
-          "Shree Cement Ltd. - 2.5%"
-       ],
-       "pros":[
-          "1. Risk is lower compared to the benchmark",
-          "2. Lower expense ratio",
-          "3. 1Y Returns are higher than the benchmark"
-       ],
-       "cons":[
-          "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
-          "2. Risk-adjusted returns are lower compared to the category",
-          "3. 3Y Returns are lower than the benchmark",
-          "4. 5Y Returns are lower than the benchmark"
-       ]
-    },
-    {
-       "id":"3",
-       "name":"HDFC Mid Cap Opportunities Direct Plan Growth",
-       "fundType":"Equity",
-       "morningStar":3,
-       "risk":"Moderately High",
-       "nav":"Rs.41.5 (31-Mar-2020)",
-       "isin":"IN10005999",
-       "fundStartDate":"01-Jan-13",
-       "fundSize":"Rs.23,788Cr",
-       "fundManager":"Chirag Setalvad",
-       "minPurchaseAmt":"Rs.500",
-       "oneYear":"-30.00%",
-       "threeYears":"-7.00%",
-       "fiveYears":"2.10%",
-       "topFive":"19.00%",
-       "topFiveHoldings":[
-          "Cholamandalam Investment & Finance Co. Ltd. - 4.5%",
-          "Aarti Industries Ltd. - 3.9%",
-          "Balkrishna Industries Ltd. - 3.8%",
-          "City Union Bank Ltd. - 3.2%",
-          "Sundram Fasteners Ltd. - 3.2%"
-       ],
-       "pros":[
-          "1. Risk is lower compared to the benchmark",
-          "2. Lower expense ratio",
-          "3. 1Y Returns are higher than the benchmark"
-       ],
-       "cons":[
-          "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
-          "2. Risk-adjusted returns are lower compared to the category",
-          "3. 3Y Returns are lower than the benchmark",
-          "4. 5Y Returns are lower than the benchmark"
-       ]
-    },
-    {
-       "id":"4",
-       "name":"DSP Midcap Direct Plan Growth",
-       "fundType":"Equity",
-       "morningStar":4,
-       "risk":"Moderately High",
-       "nav":"Rs.47.0 (31-Mar-2020)",
-       "isin":"IN10005664",
-       "fundStartDate":"01-Jan-13",
-       "fundSize":"Rs.7,458Cr",
-       "fundManager":"Vinit Sambre",
-       "minPurchaseAmt":"Rs.500",
-       "oneYear":"-18.20%",
-       "threeYears":"2.50%",
-       "fiveYears":"5.20%",
-       "topFive":"21.00%",
-       "topFiveHoldings":[
-          "Avenue Supermarts Ltd. - 5.5",
-          "City Union Bank Ltd. - 3.9%",
-          "Bata India Ltd. - 3.9%",
-          "Voltas Ltd. - 3.8%",
-          "Astral Poly Technik Ltd. - 3.5%"
-       ],
-       "pros":[
-          "1. Risk is lower compared to the benchmark",
-          "2. Lower expense ratio",
-          "3. 1Y Returns are higher than the benchmark"
-       ],
-       "cons":[
-          "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
-          "2. Risk-adjusted returns are lower compared to the category",
-          "3. 3Y Returns are lower than the benchmark",
-          "4. 5Y Returns are lower than the benchmark"
-       ]
-    }
+   {
+      "id":"1",
+      "name":"Axis Midcap Direct Plan Growth",
+      "fundType":"Equity",
+      "morningStar":5,
+      "risk":"Moderately High",
+      "nav":"Rs.35.5 (31-Mar-2020)",
+      "isin":"IN10005003",
+      "fundStartDate":"01-Jan-13",
+      "fundSize":"Rs.5,193Cr",
+      "fundManager":[{
+        "name":"Shreyash Devalkar",
+        "education":"Mr. Devalkar is a B.Tech from UDCT Mumbai and PGDM (Management) from JBIMS Mumbai University",
+        "experience":"Prior to joining Axis Mutual Fund he has worked with BNP Paribas Mutual Fund as a Fund Manager, IDFC Capital, JP Morgan Services India and Calyon Bank."}],
+      "minPurchaseAmt":"Rs.1000",
+      "oneYear":"-9.40%",
+      "threeYears":"6.70%",
+      "fiveYears":"6.60%",
+      "topFive":"21.00%",
+      "topFiveHoldings":[
+         "Avenue Supermarts Ltd. - 5.5%",
+         "City Union Bank Ltd. - 3.9%",
+         "Bata India Ltd. - 3.9%",
+         "Voltas Ltd. - 3.8%",
+         "Astral Poly Technik Ltd. - 3.5%"
+      ],
+      "pros":[
+         "1. Risk is lower compared to the benchmark",
+         "2. Lower expense ratio",
+         "3. 1Y Returns are higher than the benchmark",
+         "4. 3Y Returns are higher than the benchmark"
+      ],
+      "cons":[
+         "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
+         "2. Risk-adjusted returns are lower compared to the category",
+         "3. 5Y Returns are lower than the benchmark"
+      ],
+      "aboutFund":[{
+        "name":"Axis Mutual Fund started their mutual fund on 04/09/2009 and its managing total assets of ₹69,145 Cr. Its ranked at 10 as per total assets at end of 30th Sep 2017.",
+        "date":"04 Sep 2009",
+        "bank":"Deutsche Bank",
+        "agent":"KFin Tech"
+      }]
+   },
+   {
+      "id":"2",
+      "name":"L&T Midcap Fund Direct Growth",
+      "fundType":"Equity",
+      "morningStar":4,
+      "risk":"High",
+      "nav":"Rs.105.0 (31-Mar-2020)",
+      "isin":"IN10005006",
+      "fundStartDate":"01-Jan-2013",
+      "fundSize":"Rs.6,213Cr",
+      "fundManager":{
+        "name":"Venugopal Manghat",
+        "education":"Mr. Manghat is a B.Sc (Mathematics) and MBA (Finance).",
+        "experience":"Prior to joining L&T Mutual Fund he has worked with Tata Asset Management Ltd."},
+      "minPurchaseAmt":"Rs.500",
+      "oneYear":"-26.4%",
+      "threeYears":"-4.60%",
+      "fiveYears":"3.70%",
+      "topFive":"13.00%",
+      "topFiveHoldings":[
+         "City Union Bank Ltd. - 2.7%",
+         "Cholamandalam Investment & Finance Co. Ltd. - 2.6%",
+         "Ipca Laboratories Ltd. - 2.5%",
+         "Bayer CropScience Ltd. - 2.5%",
+         "Shree Cement Ltd. - 2.5%"
+      ],
+      "pros":[
+         "1. Risk is lower compared to the benchmark",
+         "2. Lower expense ratio",
+         "3. 1Y Returns are higher than the benchmark"
+      ],
+      "cons":[
+         "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
+         "2. Risk-adjusted returns are lower compared to the category",
+         "3. 3Y Returns are lower than the benchmark",
+         "4. 5Y Returns are lower than the benchmark"
+      ],
+      "aboutFund":[{
+        "name":"L&T Mutual Fund started their mutual fund on 03/01/1997 and its managing total assets of ₹52,749 Cr. Its ranked at 12 as per total assets at end of 30th Sep 2017.",
+        "date":"03 Jan 1997",
+        "bank":"Citibank NA",
+        "agent":"Cams"
+      }]
+   },
+   {
+      "id":"3",
+      "name":"HDFC Mid Cap Opportunities Direct Plan Growth",
+      "fundType":"Equity",
+      "morningStar":3,
+      "risk":"Moderately High",
+      "nav":"Rs.41.5 (31-Mar-2020)",
+      "isin":"IN10005999",
+      "fundStartDate":"01-Jan-13",
+      "fundSize":"Rs.23,788Cr",
+      "fundManager":[{
+        "name":"Chirag Setalvad",
+        "education":"Mr. Setalvad is a B. Sc and MBA from University of North Carolina.",
+        "experience":"Prior to joining HDFC AMC he has worked with New Vernon Advisory Services Ltd., HDFC AMC and ING Barings N.V."}],
+      "minPurchaseAmt":"Rs.500",
+      "oneYear":"-30.00%",
+      "threeYears":"-7.00%",
+      "fiveYears":"2.10%",
+      "topFive":"19.00%",
+      "topFiveHoldings":[
+         "Cholamandalam Investment & Finance Co. Ltd. - 4.5%",
+         "Aarti Industries Ltd. - 3.9%",
+         "Balkrishna Industries Ltd. - 3.8%",
+         "City Union Bank Ltd. - 3.2%",
+         "Sundram Fasteners Ltd. - 3.2%"
+      ],
+      "pros":[
+         "1. Risk is lower compared to the benchmark",
+         "2. Lower expense ratio",
+         "3. 1Y Returns are higher than the benchmark"
+      ],
+      "cons":[
+         "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
+         "2. Risk-adjusted returns are lower compared to the category",
+         "3. 3Y Returns are lower than the benchmark",
+         "4. 5Y Returns are lower than the benchmark"
+      ],
+      "aboutFund":[{
+        "name":"HDFC Mutual Fund started their mutual fund on 30/06/2000 and its managing total assets of ₹2,70,046 Cr. Its ranked at 2 as per total assets at end of 30th Sep 2017.",
+        "date":"30 Jun 2000",
+        "bank":"HDFC Bank",
+        "agent":"Cams"
+      }]
+   },
+   {
+      "id":"4",
+      "name":"DSP Midcap Direct Plan Growth",
+      "fundType":"Equity",
+      "morningStar":4,
+      "risk":"Moderately High",
+      "nav":"Rs.47.0 (31-Mar-2020)",
+      "isin":"IN10005664",
+      "fundStartDate":"01-Jan-13",
+      "fundSize":"Rs.7,458Cr",
+      "fundManager":[{
+        "name":"Vinit Sambre",
+        "education":"Mr. Sambre is a B.Com and FCA.",
+        "experience":"Prior to joining DSP he was associated with DSP Merrill Lynch Ltd.(Nov 2005 to Jun 2007), IL & FS Investsmart Ltd. (Dec 2002 to Oct 2005), Unit Trust of India Investment Advisory Services Ltd.(Jun 2000 to Dec 2002), Kisan Ratilal Choksey Shares and Securities Pvt. Ltd. (March 1999 to May 2000) and Credit Rating Information Service of India Ltd.(Apr 1998 to Feb 1999)."}],
+      "minPurchaseAmt":"Rs.500",
+      "oneYear":"-18.20%",
+      "threeYears":"2.50%",
+      "fiveYears":"5.20%",
+      "topFive":"21.00%",
+      "topFiveHoldings":[
+         "Avenue Supermarts Ltd. - 5.5",
+         "City Union Bank Ltd. - 3.9%",
+         "Bata India Ltd. - 3.9%",
+         "Voltas Ltd. - 3.8%",
+         "Astral Poly Technik Ltd. - 3.5%"
+      ],
+      "pros":[
+         "1. Risk is lower compared to the benchmark",
+         "2. Lower expense ratio",
+         "3. 1Y Returns are higher than the benchmark"
+      ],
+      "cons":[
+         "1. Asset under management(AUM) is more than 5000 Crs. Returns tend to go low once AUM exceeds a certain amount",
+         "2. Risk-adjusted returns are lower compared to the category",
+         "3. 3Y Returns are lower than the benchmark",
+         "4. 5Y Returns are lower than the benchmark"
+      ],
+      "aboutFund":[{
+        "name":"DSP BlackRock Mutual Fund started their mutual fund on 16/12/1996 and its managing total assets of ₹78,763 Cr. Its ranked at 9 as per total assets at end of 30th Sep 2017.",
+        "date":"16 Dec 1996",
+        "bank":"Citibank NA",
+        "agent":"KFin Tech"
+      }]
+   }
 ]
