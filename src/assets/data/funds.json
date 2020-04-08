@@ -1,7 +1,7 @@
 [
    {
       "id":"1",
-      "name":"Axis Midcap Direct Plan Growth",
+      "name":"Axis Midcap Direct Plan Growth Fund",
       "fundType":"Equity",
       "morningStar":5,
       "cap":"Mid Cap",
@@ -46,7 +46,7 @@
    },
    {
       "id":"2",
-      "name":"L&T Midcap Fund Direct Growth",
+      "name":"L&T Midcap Direct Plan Growth Fund",
       "fundType":"Equity",
       "morningStar":4,
       "cap":"Mid Cap",
@@ -136,7 +136,7 @@
    },
    {
       "id":"4",
-      "name":"DSP Midcap Direct Plan Growth",
+      "name":"DSP Midcap Direct Plan Growth Fund",
       "fundType":"Equity",
       "morningStar":4,
       "cap":"Mid Cap",

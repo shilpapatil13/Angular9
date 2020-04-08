@@ -7,7 +7,7 @@
         margin-right: auto;
         -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
         box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
-        height: 130px;
+        height: 165px;
         margin-top: 2.5rem;
         margin-bottom: $marginXLarge;
     }
@@ -19,7 +19,8 @@
         background-color: $whiteColor;
         text-align: center;
         border: 1px solid $lightGrayColor;
-        height: 130px;
+        border-bottom: none;
+        height: 165px;
         padding: 20px;
         position: relative;
     }
@@ -45,6 +46,7 @@
         position: relative;
         top: 2px;
         left: 1px;
+        margin-bottom: 5px;
     }
 
     &__fund-name {
@@ -67,16 +69,36 @@
     }
 
     &__fund-details {
-        margin-top: 1rem;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        margin-top: 20px;
     }
 
     &__fund-details-items {
-        padding: 0.5rem;
-        border-radius: 15px;
-        border: 2px solid $lightGrayColor;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 11px;
+        cursor: pointer;
+        height: 25px;
+        letter-spacing: .5px;
+        border-radius: 18px;
+        border: 1px solid hsla(207,5%,52%,.27);
+        background-color: #fff;
+        padding: 0 9px;
+        margin: 0 5px;
+        color: #6d6d75;
     }
     /* &__fundDetails td{
         border:0px solid;
