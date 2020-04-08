@@ -53,10 +53,10 @@
       "isin":"IN10005006",
       "fundStartDate":"01-Jan-2013",
       "fundSize":"Rs.6,213Cr",
-      "fundManager":{
+      "fundManager":[{
         "name":"Venugopal Manghat",
         "education":"Mr. Manghat is a B.Sc (Mathematics) and MBA (Finance).",
-        "experience":"Prior to joining L&T Mutual Fund he has worked with Tata Asset Management Ltd."},
+        "experience":"Prior to joining L&T Mutual Fund he has worked with Tata Asset Management Ltd."}],
       "minPurchaseAmt":"Rs.500",
       "oneYear":"-26.4%",
       "threeYears":"-4.60%",
