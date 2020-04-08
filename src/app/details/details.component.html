@@ -1,17 +1,16 @@
-
-
-<h2>Compare Funds</h2>
-<div style="border-style: ridge;max-width: 500px;display: flex;">
-    <div class ="has-search">
-        {{fundname}}
+<div class="content">
+    <div class="container">          
+        <div class="row">
+            <div class="col-lg-8">
+                <app-performance-graph [fundDetails]="fundDetails"></app-performance-graph>
+                <app-fund-details [fundDetails]="fundDetails"></app-fund-details>
+                <app-fund-returns [fundDetails]="fundDetails"></app-fund-returns>
+                <app-pros-and-cons [fundDetails]="fundDetails"></app-pros-and-cons>
+                <app-compare-fund [fundDetails]="fundDetails"></app-compare-fund>
+            </div>
+            <div class="col-lg-4">
+                <app-investment></app-investment>                   
+            </div>              
+        </div>        
     </div>
-    <div style="margin-top: 10px;">VS</div>
-    <div class ="has-search">
-        <input  type="text" style="border: 0px;"
-           placeholder="Search Mutual funds"
-           aria-label="Number"
-           (click)="navigateCompare()"
-        />
-        
-      </div>
 </div>

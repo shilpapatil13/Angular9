@@ -13,6 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FundListModalComponent } from './fund-list-modal/fund-list-modal.component';
+import { PerformanceGraphComponent } from './common/performance-graph/performance-graph.component';
+import { FundDetailsComponent } from './common/fund-details/fund-details.component';
+import { FundReturnsComponent } from './common/fund-returns/fund-returns.component';
+import { ProsAndConsComponent } from './common/pros-and-cons/pros-and-cons.component';
+import { RatingComponent } from './common/rating/rating.component';
+import { InvestmentComponent } from './common/investment/investment.component';
+import { CompareFundComponent } from './common/compare-fund/compare-fund.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,14 @@ import { FundListModalComponent } from './fund-list-modal/fund-list-modal.compon
     HomeComponent,
     DetailsComponent,
     CompareComponent,
-    FundListModalComponent
+    FundListModalComponent,
+    PerformanceGraphComponent,
+    FundDetailsComponent,
+    FundReturnsComponent,
+    ProsAndConsComponent,
+    RatingComponent,
+    InvestmentComponent,
+    CompareFundComponent
   ],
   imports: [
     BrowserModule,

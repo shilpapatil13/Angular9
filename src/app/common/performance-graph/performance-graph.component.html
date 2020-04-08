@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header border-0">
+    <div class="d-flex justify-content-between">
+      <img src="../../assets/images/{{fundDetails.id}}.png" alt="{{fundDetails.name}}" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+        <span class="text-muted">Since last week</span>
+        <span class="text-success">
+          <i class="fas fa-arrow-up"></i> 12.5%
+        </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <p class="d-flex flex-column">
+        <span class="text-bold text-lg">{{fundDetails.name}}</span>
+        <span></span>
+      </p>
+      <p class="ml-auto d-flex flex-column text-right">
+        <span class="">
+          <button type="button" class="btn btn-block btn-default btn-xs">Equity</button>
+        </span>
+        <span class="text-muted">
+          <button type="button" class="btn btn-block btn-default btn-xs">Small Cap</button>
+        </span>
+      </p>
+    </div>      
+    <div class="position-relative mb-4">
+      <div id="container" style="height: 180px;"></div>
+    </div>
+  </div>
+</div>
