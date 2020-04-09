@@ -20,6 +20,7 @@ import { ProsAndConsComponent } from './common/pros-and-cons/pros-and-cons.compo
 import { RatingComponent } from './common/rating/rating.component';
 import { InvestmentComponent } from './common/investment/investment.component';
 import { CompareFundComponent } from './common/compare-fund/compare-fund.component';
+import { HoldingAnalysisComponent } from './common/holding-analysis/holding-analysis.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CompareFundComponent } from './common/compare-fund/compare-fund.compone
     ProsAndConsComponent,
     RatingComponent,
     InvestmentComponent,
-    CompareFundComponent
+    CompareFundComponent,
+    HoldingAnalysisComponent
   ],
   imports: [
     BrowserModule,

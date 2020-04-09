@@ -1,12 +1,13 @@
 <div class="content">
     <div class="container">          
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8" *ngIf="fundDetails">
                 <app-performance-graph [fundDetails]="fundDetails"></app-performance-graph>
                 <app-fund-details [fundDetails]="fundDetails"></app-fund-details>
                 <app-fund-returns [fundDetails]="fundDetails"></app-fund-returns>
                 <app-pros-and-cons [fundDetails]="fundDetails"></app-pros-and-cons>
-                <app-compare-fund [fundDetails]="fundDetails"></app-compare-fund>
+                <app-compare-fund [fundDetails]="fundDetails"></app-compare-fund> 
+                <app-holding-analysis [fundDetails]="fundDetails"></app-holding-analysis>
             </div>
             <div class="col-lg-4">
                 <app-investment></app-investment>                   
