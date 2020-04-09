@@ -33,7 +33,14 @@ export class PerformanceGraphComponent implements OnInit {
               day:  "OPTION DAY %b %e, %Y",
               week: "OPTION WEEK Week from %b %e, %Y"
           }                    
-        },          
+        },
+        plotOptions: {
+          series: {
+              marker: {
+                enabled: false
+              }
+          }
+        },            
         xAxis: {
           visible: false,
           type: 'datetime'               
