@@ -27,12 +27,19 @@ export class PerformanceGraphComponent implements OnInit {
           borderRadius: 10,
           borderWidth: 3,
           crosshairs: [true,false],
-          pointFormat: '<b>{series.name}:</b> {point.y:.2f}<br/>',          
+          pointFormat: '<b>{series.name} : </b> {point.y:.2f} Rs.<br/>',          
           dateTimeLabelFormats: {
-              hour: "%b %e, %Y",
+              hour: "<b>DATE : </b> %b %e, %Y",
               day:  "OPTION DAY %b %e, %Y",
               week: "OPTION WEEK Week from %b %e, %Y"
           }                    
+        },
+         plotOptions: {
+          series: {
+              marker: {
+                enabled: false
+              }
+          }
         },          
         xAxis: {
           visible: false,

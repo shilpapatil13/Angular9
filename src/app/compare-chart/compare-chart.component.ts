@@ -61,29 +61,28 @@ export class CompareChartComponent implements OnInit {
 
       },
       tooltip: {
-        useHTML: true,
-        borderColor: '{series.color}',
-        shared: true,
-        split: true,
+        borderColor: '#0000a0',
         borderRadius: 10,
         borderWidth: 3,
-        xDateFormat: '%d-%b-%Y',
+        shared: true,
+        split: true,
+        crosshairs: [true,false],
+
         pointFormatter: function () {
           var point = this,
             series = point.series,
             legendSymbol = "<svg width='20' height='20'>" + series.legendSymbol.element.outerHTML + "</svg>";
-          return '<span style="margin:auto">' + legendSymbol + '<b>NAV:<b> ' + point.y + '</b></span><br/>';
-        }
+          return '<span style="margin:auto">' + legendSymbol + '<b>NAV : </b> ' + point.y + ' Rs.</span><br/>';
+        },
+        xDateFormat: '<b>DATE : </b> %d-%b-%Y'   
+
       },
       xAxis: {
         visible: false,
-        useHTML: true,
         type: 'datetime',
-        minPadding: 0.05,
-        maxPadding: 0.05
+       
       },
       yAxis: {
-        useHTML: true,
         visible: false
       },
       // series: [{

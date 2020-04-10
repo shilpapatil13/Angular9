@@ -80,7 +80,7 @@
             </tr>
             <tr class="growww__table-row-odd">
                 <td class="growww__table-heading">
-                    Min SIP Amount
+                    Min Purchase Amount
                 </td>
                 <td class="growww__table-content">{{fundData1 ? fundData1.minPurchaseAmt : '-'}}</td>
                 <td class="growww__table-content">{{fundData2 ? fundData2.minPurchaseAmt :'-'}}</td>
@@ -109,6 +109,14 @@
                 <td class="growww__table-content">{{fundData1 ? fundData1.fundSize : '-'}}</td>
                 <td class="growww__table-content">{{fundData2 ? fundData2.fundSize:'-'}}</td>
                 <td class="growww__table-content growww__no-right-border">{{fundData3 ? fundData3.fundSize:'-'}}</td>
+            </tr>
+            <tr class="growww__table-row-odd">
+                <td class="growww__table-heading">
+                    ISIN
+                </td>
+                <td class="growww__table-content">{{fundData1 ? fundData1.isin: '-'}}</td>
+                <td class="growww__table-content">{{fundData2 ? fundData2.isin: '-'}}</td>
+                <td class="growww__table-content growww__no-right-border">{{fundData3 ? fundData3.isin: '-'}}</td>
             </tr>
         </table>
     </div>

@@ -21,7 +21,8 @@ import { RatingComponent } from './common/rating/rating.component';
 import { InvestmentComponent } from './common/investment/investment.component';
 import { CompareFundComponent } from './common/compare-fund/compare-fund.component';
 import { CompareChartComponent } from './compare-chart/compare-chart.component';
-
+import { HoldingAnalysisComponent } from './common/holding-analysis/holding-analysis.component';
+import { ReturnsFieldComponent } from './common/returns-field/returns-field.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,10 @@ import { CompareChartComponent } from './compare-chart/compare-chart.component';
     RatingComponent,
     InvestmentComponent,
     CompareChartComponent,
-    CompareFundComponent
+    CompareFundComponent,
+    CompareFundComponent,
+    HoldingAnalysisComponent,
+    ReturnsFieldComponent
   ],
   imports: [
     BrowserModule,
