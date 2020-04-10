@@ -1,23 +1,12 @@
 <div class="card">   
     <div class="card-header border-0">
-        <h3 class="card-title">Compare Funds</h3>              
+        <h2 class="card-title">Compare Funds</h2>              
     </div> 
     <div class="card-body">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">                              
-                    <div class="card-body">
-                        {{fundDetails.name}}
-                    </div>            
-                </div>          
-            </div>    
-            <div class="col-md-6">
-                <div class="card">                       
-                    <div class="card-body">                       
-                        <button type="button" (click)="navigateCompare()" class="btn btn-block btn-default btn-xs">Search Mutual Fund</button>
-                    </div>
-                </div>    
-            </div>  
-        </div>
+        <h4 class="text-muted">{{fundDetails.name}}</h4> 
+        <div style="margin-left:45%">
+            <h3 class="card-title" style="color: #0000a0;">VS</h3> 
+        </div>       
+        <button type="button" (click)="navigateCompare()" class="btn btn-block btn-default">Search Mutual Fund</button>
     </div>
 </div>

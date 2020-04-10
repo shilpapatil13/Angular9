@@ -1,0 +1,7 @@
+<span class="text-muted">1 Year Return </span>
+<span class="text-success" *ngIf="isPositive">
+    <i class="fas fa-arrow-up"></i>{{showReturns}}
+</span>
+<span class="text-danger" *ngIf="!isPositive">
+    <i class="fas fa-arrow-down"></i>{{showReturns}}
+</span>

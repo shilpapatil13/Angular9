@@ -3,29 +3,67 @@
     <div class="d-flex justify-content-between">
       <img src="../../assets/images/{{fundDetails.id}}.png" alt="{{fundDetails.name}}" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-        <span class="text-muted"><app-rating [rating]="fundDetails.morningStar"></app-rating> </span>
-        <span class="text-success">
-          <i class="fas fa-arrow-up"></i> 12.5%
-        </span>
+        <span class="text-muted"></span>
+        <app-returns-field [fundDetails]="fundDetails"></app-returns-field>
     </div>
   </div>
   <div class="card-body">
     <div class="d-flex">
       <p class="d-flex flex-column">
         <span class="text-bold text-lg">{{fundDetails.name}}</span>
-        <span></span>
+        <span><app-rating [rating]="fundDetails.morningStar"></app-rating></span>
       </p>
+      <ul class="nav nav-pills ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-block btn-default btn-xs" href="#">Equity</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-block btn-default btn-xs" href="#">Small Cap</a>
+        </li>
+      </ul>
       <p class="ml-auto d-flex flex-column text-right">
-        <span class="">
-          <button type="button" class="btn btn-block btn-default btn-xs">Equity</button>
-        </span>
-        <span class="text-muted">
-          <button type="button" class="btn btn-block btn-default btn-xs">Small Cap</button>
-        </span>
+        <span class="text-muted"></span>        
       </p>
     </div>      
     <div class="position-relative mb-4">
       <div id="container" style="height: 180px;"></div>
     </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="description-block">          
+        </div>      
+      </div>
+      <div class="col-sm-1">
+        <div class="description-block">
+          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">6M</button>
+        </div>        
+      </div>
+      <div class="col-sm-1">
+        <div class="description-block">
+          <button type="button" class="active btn btn-block btn-outline-secondary btn-xs">1Y</button>
+        </div>        
+      </div>      
+      <div class="col-sm-1">
+        <div class="description-block">
+          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">3Y</button>
+        </div>        
+      </div>
+      <div class="col-sm-1">
+        <div class="description-block">
+          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">5Y</button>
+        </div>      
+      </div>
+      <div class="col-sm-1">
+        <div class="description-block">
+          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">All</button>
+        </div>      
+      </div>      
+      <div class="col-sm-3">
+        <div class="description-block">          
+        </div>        
+      </div>    
+    </div>  
   </div>
 </div>

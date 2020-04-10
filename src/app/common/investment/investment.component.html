@@ -1,13 +1,13 @@
 <div class="card">
     <div class="card-header border-0">
         <div class="d-flex justify-content-between">
-          <h3 class="card-title">Invest Now</h3>                      
+          <h2 class="card-title">Invest Now</h2>                      
         </div>
     </div>
     <div class="card-body">
         <h4 class="text-muted">Enter investment amount</h4>   
         <input type="number" [(ngModel)]= "investmentAmount" name="investmentAmount" class="form-control" placeholder="0"><br>
-        <div class="btn-group">
+        <div class="btn-group" style="padding-left:23%;">
             <button type="button" (click)="addInvestmentAmount(5000)" class="btn btn-outline-info btn-xs">+5000</button>
             <button type="button" (click)="addInvestmentAmount(10000)" class="btn btn-outline-info btn-xs">+10000</button>
             <button type="button" (click)="addInvestmentAmount(20000)" class="btn btn-outline-info btn-xs">+20000</button>
@@ -15,8 +15,8 @@
         <br>
         <br>
         <div class="card-footer">
-            <button type="submit" class="btn btn-info btn-xs">ONE TIME</button>
-            <button type="submit" class="btn btn-info btn-xs float-right">MONTHLY</button>
+            <button type="submit" class="btn btn-info btn-xs">One Time</button>
+            <button type="submit" class="btn btn-info btn-xs float-right">Monthly</button>
         </div>                    
     </div>
 </div>       
