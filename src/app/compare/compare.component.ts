@@ -52,7 +52,8 @@ export class CompareComponent implements OnInit {
     dialogConfig.height = "350px";
     dialogConfig.width = "600px";
     dialogConfig.data = {
-      modalid: i
+      modalid: i,
+      fundListAfterSelect : this.fundsList
     };
     
     const modalDialog = this.matDialog.open(FundListModalComponent, dialogConfig);
@@ -60,22 +61,22 @@ export class CompareComponent implements OnInit {
       if(result)
       
         {
-          if(result.modalBoxId.modalid === 1)
+          if(result.modalBoxId === 1)
           {
-            this.modalBox1 = result.modalBoxId.modalid;
+            this.modalBox1 = result.modalBoxId;
             this.fundName1 = result.name;
             this.fundData1 = result;
          
           }
-          if(result.modalBoxId.modalid === 2)
+          if(result.modalBoxId === 2)
           {
-            this.modalBox2 = result.modalBoxId.modalid;
+            this.modalBox2 = result.modalBoxId;
             this.fundName2 = result.name;
             this.fundData2 = result;
           }
-          if(result.modalBoxId.modalid === 3)
+          if(result.modalBoxId === 3)
           {
-            this.modalBox3 = result.modalBoxId.modalid;
+            this.modalBox3 = result.modalBoxId;
             this.fundName3 = result.name;
             this.fundData3 = result;
           }
@@ -114,14 +115,18 @@ private addAndGetFundsList(result: any):any[] {
   console.log(this.fundsList);
   
   if(modalId === 1) {
+    this.fundsList.splice(this.fundsList.indexOf(this.fundData1), 1);
     this.modalBox1 = 0;  
     this.fundData1 = '';
   }
   else if(modalId === 2) {
+   
+    this.fundsList.splice(this.fundsList.indexOf(this.fundData2), 1);
     this.modalBox2 = 0;
     this.fundData2 = '';
   }
   else if(modalId === 3) {
+    this.fundsList.splice(this.fundsList.indexOf(this.fundData3), 1);
     this.modalBox3 = 0;
     this.fundData3 = '';
   }
