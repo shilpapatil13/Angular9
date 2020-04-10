@@ -28,7 +28,7 @@ export class HoldingAnalysisComponent implements OnInit {
       $('#pieChart').highcharts({
         chart: {
           plotBackgroundColor: null,
-          plotBorderWidth: null,
+          plotBorderWidth: 0,
           plotShadow: false,
           type: 'pie',
           marginBottom: 100,
@@ -44,34 +44,28 @@ export class HoldingAnalysisComponent implements OnInit {
           y: 110
         },
         title: {
-          text: 'Equity Sector Allocation'
+          text: 'Equity Sector Allocation',
+          x: -60
+
         },
+        subtitle: {
+          text: 'Rs 15995 Cr',
+          x:-60,
+          y:180,
+          style: {
+            fontWeight: 'bold'
+        }
+      },
         tooltip: {
           pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
         },
         plotOptions: {
           pie: {
             
-            //depth: 45,
-            //size: 220,
             allowPointSelect: true,
             cursor: 'pointer',
             dataLabels: {
-            //  enabled: true,
-              distance: -113,
-              y: 0,
-              format: "Rs 15995 Cr",
-              style: {
-                  fontWeight: 'bold',
-                  color: 'black',
-                  fontSize: '14px'
-              },
-             //filter: {
-                 // property: 'name',
-                 // operator: '===',
-//value: 'Technology'
-              //},
-            
+              enabled: false,
             },
             showInLegend: true
           },
@@ -80,7 +74,7 @@ export class HoldingAnalysisComponent implements OnInit {
           }
         },
         series: [{
-          name: 'Brands',
+          name: '',
           type: 'pie',
           //colorByPoint: true,
           innerSize: '50%',
