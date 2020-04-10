@@ -37,6 +37,7 @@ export class CompareComponent implements OnInit {
       this.fundName1 = data[0].name;
       const result = {name:this.fundName1,modalBoxId: {modalid:this.modalBox1}};
        this.addAndGetFundsList(result);
+       this.notifyChildren(data);
     });
   }
 
