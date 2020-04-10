@@ -31,36 +31,26 @@
   </div>
   <div class="card-footer">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-5">
         <div class="description-block">          
         </div>      
-      </div>
+      </div>     
       <div class="col-sm-1">
         <div class="description-block">
-          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">6M</button>
-        </div>        
-      </div>
-      <div class="col-sm-1">
-        <div class="description-block">
-          <button type="button" class="active btn btn-block btn-outline-secondary btn-xs">1Y</button>
+          <button type="button" (click)="getYear(1)" [class.active]="selectedYear1" class="btn btn-block btn-outline-secondary btn-xs">1Y</button>
         </div>        
       </div>      
       <div class="col-sm-1">
         <div class="description-block">
-          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">3Y</button>
+          <button type="button" (click)="getYear(3)" [class.active]="selectedYear3" class="btn btn-block btn-outline-secondary btn-xs">3Y</button>
         </div>        
       </div>
       <div class="col-sm-1">
         <div class="description-block">
-          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">5Y</button>
+          <button type="button" (click)="getYear(5)" [class.active]="selectedYear5" class="btn btn-block btn-outline-secondary btn-xs">5Y</button>
         </div>      
-      </div>
-      <div class="col-sm-1">
-        <div class="description-block">
-          <button type="button" class="btn btn-block btn-outline-secondary btn-xs">All</button>
-        </div>      
-      </div>      
-      <div class="col-sm-3">
+      </div>        
+      <div class="col-sm-4">
         <div class="description-block">          
         </div>        
       </div>    
