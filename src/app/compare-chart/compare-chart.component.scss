@@ -1,0 +1,95 @@
+.toolbarpadding {
+    padding: 25px 20px 0;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.secondGreenLine {
+    left: 67.31px;
+}
+.greenLine {
+    position: absolute;
+    width: 31.31px;
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #00d09c;
+    -webkit-transition: left .28s linear;
+    transition: left .28s linear;
+}
+.para13 {
+    font-size: 13px;
+    color: #6d6d75;
+}
+.absolute-center, .valign-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.yearWrapper {
+    font-weight: 500;
+    margin-top: 25px;
+    border-bottom: 1px solid #e4e4e4;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+ }
+// .GraphLabel1 {
+//     width: 20px;
+//     height: 4px;
+//     border-radius: 2px;
+//     margin-right: 10px;
+// }
+// .GraphLabelText {
+//     font-size: inherit;
+//     font-weight: inherit;
+//     margin: inherit;
+// }
+// .LabelReturns {
+//     margin-left: 15px;
+//     font-size: 20px;
+//     font-weight: 500;
+// }
+// .GraphLabelMargin {
+//     margin-top: 10px;
+// }
+// .GraphLabelDiv
+// {
+// display: flex;
+// }
+
+#chartcontainer {
+    height: 300px;
+}
+::ng-deep .mat-button-toggle
+{
+    margin: 0px 15px 0px 0px;
+ 
+}
+::ng-deep .mat-button-toggle-group-appearance-standard{
+    border:none;
+}
+
+::ng-deep .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+     line-height: 30px !important; 
+     outline:none !important;
+
+}
+::ng-deep .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
+{
+    border-left:none;
+}
+::ng-deep .mat-button-toggle-checked {
+    position: absolute;
+     width: 40px;
+    border-bottom: 3px solid darkblue;
+    background-color: transparent;
+}
+
+.chartDiv
+{
+padding:15px 30px;
+}

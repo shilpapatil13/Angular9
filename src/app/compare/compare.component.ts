@@ -4,6 +4,7 @@ import { FundListModalComponent } from '../fund-list-modal/fund-list-modal.compo
 import { Fund } from '../models/fund';
 import { FundService } from '../services/fund.service';
 import { ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-compare',
@@ -11,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./compare.component.scss']
 })
 export class CompareComponent implements OnInit {
+  parentSubject:Subject<any> = new Subject();
 
   constructor(public matDialog: MatDialog, private fundService: FundService, private route: ActivatedRoute) { }
   fundsList: any = [];
@@ -57,7 +59,6 @@ export class CompareComponent implements OnInit {
       if(result)
       
         {
-
           if(result.modalBoxId.modalid === 1)
           {
             this.modalBox1 = result.modalBoxId.modalid;
@@ -81,6 +82,8 @@ export class CompareComponent implements OnInit {
           this.addAndGetFundsList(result);
 
           //this.fundsList = this.fundsList;
+          this.notifyChildren(this.fundsList)
+
           console.log(this.fundsList);
          
         }
@@ -105,7 +108,8 @@ private addAndGetFundsList(result: any):any[] {
    
   let fileredData =  this.fundsList.filter(elem => (elem.modalBoxId.modalid !=modalId))
   this.fundsList = fileredData;
-    
+  this.notifyChildren(this.fundsList)
+
   console.log(this.fundsList);
   
   if(modalId === 1) {
@@ -126,4 +130,7 @@ private addAndGetFundsList(result: any):any[] {
   }
 
    
+  notifyChildren(data) {
+    this.parentSubject.next(data);
+  }
 }

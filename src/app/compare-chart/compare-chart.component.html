@@ -1,0 +1,18 @@
+<div  *ngIf="showChartContainer">
+<div class="position-relative mb-4 chartDiv">
+    <div id="chartcontainer"></div>
+</div>
+<div class="valign-wrapper para13 yearWrapper">
+    <div class="valign-wrapper" style="position: relative;">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [value]="selectedVal">
+            <mat-button-toggle value="1" (change)="onValChange($event.value)">1Y</mat-button-toggle>
+            <mat-button-toggle value="3" (change)="onValChange($event.value)">3Y</mat-button-toggle>
+            <mat-button-toggle value="5" (change)="onValChange($event.value)">5Y</mat-button-toggle>
+        </mat-button-toggle-group>
+        <!-- <div class="toolbarpadding"><span>1Y</span></div>
+        <div class="toolbarpadding"><span>3Y</span></div>
+        <div class="toolbarpadding"><span>5Y</span></div>
+        <div class="greenLine firstGreenLine"></div> -->
+    </div>
+</div>
+</div>
