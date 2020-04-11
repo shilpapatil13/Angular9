@@ -114,7 +114,7 @@ export class CompareChartComponent implements OnInit {
     var chart2 = $("#chartcontainer").highcharts();
     if (chart2) {
       for (let i = 0; i < this.fundDetails.length; i++) {
-        let fundChartData = event[i]['fundChartData']
+        let fundChartData = this.fundDetails[i]['fundChartData']
         var legendtitle = fundChartData['name'] + ' (' + fundChartData[titleyearmap[year]] + ') '
         chart2.series[i].update({ name: legendtitle });
         chart2.series[i].setData(fundChartData['chartData'][0][yearmap[year]])
