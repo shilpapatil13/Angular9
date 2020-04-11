@@ -35,7 +35,7 @@ export class CompareComponent implements OnInit {
       this.modalBox1 = 1;
       this.fundData1 = data[0];
       this.fundName1 = data[0].name;
-      const result = {name:this.fundName1,modalBoxId: {modalid:this.modalBox1}};
+      const result = {id: this.fundData1.id,name:this.fundName1,modalBoxId: this.modalBox1};
        this.addAndGetFundsList(result);
        this.notifyChildren(data);
     });
@@ -108,25 +108,22 @@ private addAndGetFundsList(result: any):any[] {
 
   toggleFunds(modalId){
    
-  let fileredData =  this.fundsList.filter(elem => (elem.modalBoxId.modalid !=modalId))
+  let fileredData =  this.fundsList.filter(elem => (elem.modalBoxId !=modalId))
   this.fundsList = fileredData;
   this.notifyChildren(this.fundsList)
 
   console.log(this.fundsList);
   
   if(modalId === 1) {
-    this.fundsList.splice(this.fundsList.indexOf(this.fundData1), 1);
     this.modalBox1 = 0;  
     this.fundData1 = '';
   }
   else if(modalId === 2) {
    
-    this.fundsList.splice(this.fundsList.indexOf(this.fundData2), 1);
     this.modalBox2 = 0;
     this.fundData2 = '';
   }
   else if(modalId === 3) {
-    this.fundsList.splice(this.fundsList.indexOf(this.fundData3), 1);
     this.modalBox3 = 0;
     this.fundData3 = '';
   }
