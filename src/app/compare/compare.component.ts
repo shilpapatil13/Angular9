@@ -79,7 +79,7 @@ export class CompareComponent implements OnInit {
         result['fundChartData'] = result;
         this.addAndGetFundsList(result);
 
-        console.log(this.fundsList);
+        //console.log(this.fundsList);
 
       }
     });
