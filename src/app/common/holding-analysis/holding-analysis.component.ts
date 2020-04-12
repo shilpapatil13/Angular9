@@ -47,7 +47,7 @@ export class HoldingAnalysisComponent implements OnInit {
     $(function () {
       
       Highcharts.setOptions({
-        colors: ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']
+        colors: ['#2B547E', '#342D7E', '#0041C2', '#6960EC', '#488AC7', '#95B9C7', '#56A5EC', '#00FFFF']
       });
       $('#pieChart').highcharts({
         chart: {
