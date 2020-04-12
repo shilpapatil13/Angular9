@@ -36,12 +36,17 @@ export class HoldingAnalysisComponent implements OnInit {
         },
         legend: {
           useHTML: true,
-          labelFormat: '<table><tr><td style="text-align: center;border-right: .5px;border-left: .5px; padding-left: 30px;">{name}</td><td style="text-align: center;border-right: .5px ;border-left: .5px ; padding-left: 30px;">{y}</td></tr></table>',
+          labelFormatter: function() {
+                return '<div style=" display: flex;-webkit-box-align: center; '
+                +'position: relative;margin-bottom: 15px; ">'
+                +'<div style="color:#000000,font-size:12px !important; width:150px">'
+                +'<b>'+ this.name + '</b></div><div style="color:#000000,font-size:12px position: absolute;top: 0;right: -95px;!important;">'+this.y+'%</div></div>'; 
+        },	
           align: 'right',
           verticalAlign: 'top',
           layout: 'vertical',
           x: 0,
-          y: 110
+          y: 105
         },
         title: {
           text: 'Equity Sector Allocation',
@@ -50,7 +55,7 @@ export class HoldingAnalysisComponent implements OnInit {
         },
         subtitle: {
           text: 'Rs 15995 Cr',
-          x:-60,
+          x:-67,
           y:180,
           style: {
             fontWeight: 'bold'
