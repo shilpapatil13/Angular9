@@ -14,12 +14,36 @@ declare var Highcharts: any;
 })
 export class HoldingAnalysisComponent implements OnInit {
   @Input() fundDetails: Fund;
+  dataForChart;
+  
   constructor() {
     
   }
   
   ngOnInit() {
-    if (this.fundDetails!=undefined) {
+    this.dataForChart = [
+      {
+      name: 'Services',
+      y: this.fundDetails.yvalService
+      }, {
+      name: 'Others',
+      y: this.fundDetails.yvalOthers
+      }, {
+      name: 'Technology',
+      y: this.fundDetails.yvalTechnology
+      }, {
+      name: 'Financial',
+      y: this.fundDetails.yvalFinancial
+      }, {
+      name: 'FMCG',
+      y: this.fundDetails.yvalFMCG
+      }, {
+      name: 'Chemicals',
+      y: this.fundDetails.yvalChemical
+    }]
+    this.createChartForHoldingAnalysis(this.dataForChart, this.fundDetails.allocatedFund);
+  }
+  createChartForHoldingAnalysis (data : any, allocatedFund: string){
     $(function () {
       
       Highcharts.setOptions({
@@ -54,7 +78,7 @@ export class HoldingAnalysisComponent implements OnInit {
 
         },
         subtitle: {
-          text: 'Rs 15995 Cr',
+          text: allocatedFund,
           x:-67,
           y:180,
           style: {
@@ -83,29 +107,10 @@ export class HoldingAnalysisComponent implements OnInit {
           type: 'pie',
           //colorByPoint: true,
           innerSize: '50%',
-          data: [{
-            name: 'Services',
-            y: 8.6
-          }, {
-            name: 'Others',
-            y: 14.7
-          }, {
-            name: 'Technology',
-            y: 10.4
-          }, {
-            name: 'Financial',
-            y: 50.2
-          }, {
-            name: 'FMCG',
-            y: 9.2
-          }, {
-            name: 'Chemicals',
-            y: 6.8
-          }]
+          data:  data
         }]
-      });
     });
-  }
-  }
+  });
 }
 
+}
