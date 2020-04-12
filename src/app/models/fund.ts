@@ -2,6 +2,7 @@ export interface Fund {
     id: number;
     name: string;
     fundType: string;
+	cap: string;
     morningStar: number;
     risk: string;
     nav: string;
