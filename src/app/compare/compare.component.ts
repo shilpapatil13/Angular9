@@ -40,7 +40,7 @@ export class CompareComponent implements OnInit {
         this.addAndGetFundsList(result);
       });
     }
-
+    window.scrollTo(0, 0);
   }
 
   openModal(i) {
@@ -79,7 +79,7 @@ export class CompareComponent implements OnInit {
         result['fundChartData'] = result;
         this.addAndGetFundsList(result);
 
-        console.log(this.fundsList);
+        //console.log(this.fundsList);
 
       }
     });
